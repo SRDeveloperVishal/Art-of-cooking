@@ -21,33 +21,33 @@
                     <p class="font-weight-bold h5 "><span>Book a Appointment </span></p>
                 </div>
                 <div class="booking mb-2 ">
-                    <form action="">
+                    <form action="booking.php" method="POST">
                         <div class="form-group">
                             <label for="exampleInputName">Enter Name</label>
-                            <input type="text" class="form-control form-control-sm"" id="exampleInputName" placeholder="Name" required>
+                            <input type="text" class="form-control form-control-sm" id="exampleInputName" name="fullname" placeholder="Name" required>
                         </div>
                         <div class="row mb-3">
                             <div class="col">
                                 <label for="email" class="form-control-sm">Enter Email</label>
-                                <input type="email" class="form-control form-control-sm" id="email" placeholder="Email" required>
+                                <input type="email" class="form-control form-control-sm" id="email" name="email" placeholder="Email" required>
                             </div>
                             <div class="col">
                                 <label for="text" class="form-control-sm">Phone Number</label>
-                                <input type="text" class="form-control form-control-sm" placeholder="Phone number"
+                                <input type="text" class="form-control form-control-sm" name="phone" placeholder="Phone number"
                                     required>
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col">
                                 <label for="date" class="form-control-sm">Select booking date</label>
-                                <input type="date" class="form-control form-control-sm" id="date" required>
+                                <input type="date"  name="booking_date" class="form-control form-control-sm" id="date" required>
                             </div>
                             <div class="col">
                                 <label for="address" class="form-control-sm">Enter your Address</label>
-                                <input type="text" class="form-control form-control-sm" id="address" placeholder="Address" required>
+                                <input type="text" class="form-control form-control-sm" name="address" id="address" placeholder="Address" required>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-sm">Book Now</button>
+                        <button type="submit" name="submit" class="btn btn-primary btn-sm">Book Now</button>
                     </form>
 
                 </div>
