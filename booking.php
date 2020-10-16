@@ -1,6 +1,5 @@
 <?php
 require('config.php');
-// If form submitted, insert values into the database.
 if (isset($_REQUEST['submit'])){
 	$fullname = stripslashes($_REQUEST['fullname']);
 	$fullname = mysqli_real_escape_string($con,$fullname); 
@@ -12,12 +11,11 @@ if (isset($_REQUEST['submit'])){
 	$booking_date = mysqli_real_escape_string($con,$booking_date);
 	$address = stripslashes($_REQUEST['address']);
 	$address = mysqli_real_escape_string($con,$address);
-        $query = "INSERT into `bookings` (fullname, email, phone, booking_date, address)
-VALUES ('$fullname', '$email', '$phone', '$booking_date' '$address')";
-        $result = mysqli_query($con,$query) or die ( mysqli_error() );
+        $query = "INSERT into `bookings` (fullname, email, phone, booking_date, address) VALUES ('$fullname', '$email', '$phone', '$booking_date', '$address')";
+        $result = mysqli_query($con,$query);
         if($result){
             echo "<script>
-                window.location = 'index.php';
+                window.location = 'index.html';
             </script>";
         } else {
             echo "something went wrong!";
